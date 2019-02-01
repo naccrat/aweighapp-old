@@ -16,6 +16,27 @@ featured_image: /images/social.jpg
 
 </section>
 
+<section class="cta">
+	<div class="wrap">
+		<p>Please let us know if you are interested in testing our app.</p>
+		<form method="post" action="{{ site.data.settings.contact_settings.form_action }}" id="contact-form">
+
+			<div class="contact-form__item">
+				<label class="contact-form__label">Email Address *</label>
+				<input type="text" name="email" placeholder="Your email address..." class="contact-form__input">
+			</div>
+	
+			<input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url }}" />
+			<input type="hidden" name="_subject" value="{{ site.data.settings.contact_settings.email_subject }}" />
+			<input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
+	
+			<div class="contact-form__item">
+				<input type="submit" value="{{ site.data.settings.contact_settings.send_button_text }}" class="button button--large">
+			</div>
+	
+		</form>
+	</div>
+</section>
 <section class="portfolio">
 
 	<div class="content-wrap portfolio-wrap">
